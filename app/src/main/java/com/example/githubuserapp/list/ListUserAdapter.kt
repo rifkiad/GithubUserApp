@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.githubuserapp.Api.DetailResponse
 import com.example.githubuserapp.ItemsItem
 import com.example.githubuserapp.databinding.ItemUserBinding
 import com.example.githubuserapp.main.DetailUserActivity
