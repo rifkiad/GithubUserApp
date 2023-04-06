@@ -1,11 +1,14 @@
 package com.example.githubuserapp.list
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.githubuserapp.Api.DetailResponse
 import com.example.githubuserapp.ItemsItem
 import com.example.githubuserapp.databinding.ItemUserBinding
+import com.example.githubuserapp.main.DetailUserActivity
 
 class ListUserAdapter : RecyclerView.Adapter<ListUserAdapter.ListUserViewHolder>() {
 
@@ -33,6 +36,11 @@ class ListUserAdapter : RecyclerView.Adapter<ListUserAdapter.ListUserViewHolder>
                     .load(this.avatarUrl)
                     .into(binding.imgAvatar)
 
+                itemView.setOnClickListener {
+                    val intentToDetail = Intent(it.context, DetailUserActivity::class.java)
+                    intentToDetail.putExtra("USERNAME", this.login)
+                    it.context.startActivity(intentToDetail)
+                }
             }
         }
     }
