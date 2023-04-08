@@ -19,7 +19,7 @@ class DetailUserActivity : AppCompatActivity() {
         binding = ActivityDetailUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val dataUsername = intent.getStringExtra("Username")
+        val dataUsername = intent.getStringExtra("USERNAME")
 
         viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[DetailUserViewModel::class.java]
         dataUsername?.let { viewModel.detailUser(it) }
