@@ -14,6 +14,9 @@
         android:theme="@style/Theme.GithubUserApp"
         tools:targetApi="31">
         <activity
+            android:name=".ListFollower"
+            android:exported="false" />
+        <activity
             android:name=".main.DetailUserActivity"
             android:exported="false" />
         <activity
